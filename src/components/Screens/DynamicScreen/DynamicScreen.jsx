@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import errorBG from '../../../img/back1.webp';
-import maintenanceBG from '../../../img/back2.webp';
-import comingSoonBG from '../../../img/back3.webp';
+// import errorBG from '../../../img/back1.webp';
+// import maintenanceBG from '../../../img/back2.webp';
+// import comingSoonBG from '../../../img/back3.webp';
 import './DynamicScreen.scss'; // Import the CSS file for styling
 
 const DynamicScreen = ({ variant }) => {
@@ -11,24 +11,24 @@ const DynamicScreen = ({ variant }) => {
 	// Define the different backgrounds and texts
 	const variants = {
 		error: {
-			backgroundImage: `url(${errorBG})`,
+			// backgroundImage: `url(${errorBG})`,
 			text: `${t('error404')}`,
 			style: {
-				background: `url(${errorBG}) no-repeat center center/cover`,
+				// background: `url(${errorBG}) no-repeat center center/cover`,
 			},
 		},
 		maintenance: {
-			backgroundImage: `url(${maintenanceBG})`,
+			// backgroundImage: `url(${maintenanceBG})`,
 			text: `${t('repairUpdate')}`,
 			style: {
-				background: `url(${maintenanceBG}) no-repeat center center/cover`,
+				// background: `url(${maintenanceBG}) no-repeat center center/cover`,
 			},
 		},
 		comingSoon: {
-			backgroundImage: `url(${comingSoonBG})`,
+			// backgroundImage: `url(${comingSoonBG})`,
 			text: `${t('comingSoon')}`,
 			style: {
-				background: `url(${comingSoonBG}) no-repeat center center/cover`,
+				// background: `url(${comingSoonBG}) no-repeat center center/cover`,
 			},
 		},
 	};
@@ -45,4 +45,4 @@ const DynamicScreen = ({ variant }) => {
 	);
 };
 
-export default DynamicScreen;
+// export default DynamicScreen;

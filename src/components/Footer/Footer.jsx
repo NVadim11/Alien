@@ -11,7 +11,7 @@ import {
 import { useTonAddress, TonConnectButton } from '@tonconnect/ui-react';
 import { useTranslation } from 'react-i18next';
 import cross from '../../img/cross.svg';
-import tigerCoin from '../../img/tigranBoost.webp';
+import boostCoin from '../../img/alienBoost.webp';
 import Modal from '../Modal/Modal';
 import './Footer.scss';
 import { init } from 'aos';
@@ -521,7 +521,7 @@ const Footer = ({ user }) => {
 									{user?.wallet_balance && (
 										<>
 											<div className='popupTasks__coinImg' draggable='false'>
-												<img src={tigerCoin} alt='Tiger coin' />
+												<img src={boostCoin} alt='Tiger coin' />
 											</div>
 											<div className='popupTasks__coinAmount'>
 												<span id='coinAmount'>{user?.wallet_balance}</span>
@@ -582,7 +582,7 @@ const Footer = ({ user }) => {
 									{!user?.wallet_address ? (
 										<p>
 											20000
-											<img src={tigerCoin} alt='Tiger coin' />
+											<img src={boostCoin} alt='Tiger coin' />
 										</p>
 									) : (
 										<p>{t('activityDone')}</p>
@@ -600,7 +600,7 @@ const Footer = ({ user }) => {
 										{twitterTaskStatus === 0 && (
 											<p>
 												10000
-												<img src={tigerCoin} alt='Tiger coin' />
+												<img src={boostCoin} alt='Tiger coin' />
 											</p>
 										)}
 										{twitterTaskStatus === 2 && (
@@ -628,7 +628,7 @@ const Footer = ({ user }) => {
 										{chatTaskStatus === 0 && (
 											<p>
 												10000
-												<img src={tigerCoin} alt='Tiger coin' />
+												<img src={boostCoin} alt='Tiger coin' />
 											</p>
 										)}
 										{chatTaskStatus === 2 && (
@@ -656,7 +656,7 @@ const Footer = ({ user }) => {
 										{channelTaskStatus === 0 && (
 											<p>
 												10000
-												<img src={tigerCoin} alt='Tiger coin' />
+												<img src={boostCoin} alt='Tiger coin' />
 											</p>
 										)}
 										{channelTaskStatus === 2 && (
@@ -684,7 +684,7 @@ const Footer = ({ user }) => {
 										{websiteTaskStatus === 0 && (
 											<p>
 												3000
-												<img src={tigerCoin} alt='Tiger coin' />
+												<img src={boostCoin} alt='Tiger coin' />
 											</p>
 										)}
 										{websiteTaskStatus === 2 && (
@@ -739,7 +739,7 @@ const Footer = ({ user }) => {
 																</span>
 																{quest.reward}{' '}
 																<div className='rewardCoin'>
-																	<img src={tigerCoin} alt='Tiger coin' />
+																	<img src={boostCoin} alt='Tiger coin' />
 																</div>
 															</p>
 														) : (
@@ -772,7 +772,7 @@ const Footer = ({ user }) => {
 															<p className='popupTasks__task-rew'>
 																{quest.reward}{' '}
 																<div className='rewardCoin'>
-																	<img src={tigerCoin} alt='Tiger coin' />
+																	<img src={boostCoin} alt='Tiger coin' />
 																</div>
 															</p>
 														) : (
@@ -824,7 +824,7 @@ const Footer = ({ user }) => {
 															<p className='popupTasks__task-rew'>
 																{quest.reward}{' '}
 																<div className='rewardCoin'>
-																	<img src={tigerCoin} alt='Tiger coin' />
+																	<img src={boostCoin} alt='Tiger coin' />
 																</div>
 															</p>
 														) : (

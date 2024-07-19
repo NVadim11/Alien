@@ -3,7 +3,7 @@
   --mainColor: #1c2520;
   --altColor: #fff;
   --minWidth: 390px;
-  --mainBG: rgba(157, 241, 155, 1);
+  --mainBG: linear-gradient(#331148, #28064A);;
   --altBG: #80c27d;
   }
   
@@ -22,7 +22,7 @@
   }
 
   body {
-    background-image: url("img/cover.webp");
+    // background-image: url("img/cover.webp");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;

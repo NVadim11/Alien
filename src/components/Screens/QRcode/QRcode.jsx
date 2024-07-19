@@ -1,6 +1,6 @@
 import React from 'react';
-import preloaderBG from '../../../img/back2.webp';
-import QRimg from '../../../img/tigranQR.webp';
+// import preloaderBG from '../../../img/back2.webp';
+// import QRimg from '../../../img/tigranQR.webp';
 import './QRcode.scss'; // Import the CSS file for styling
 
 const TelegramLinking = () => {
@@ -8,7 +8,7 @@ const TelegramLinking = () => {
 		<div
 			className='qrComponent'
 			style={{
-				background: `url(${preloaderBG}) no-repeat center center/cover`,
+				// background: `url(${preloaderBG}) no-repeat center center/cover`,
 			}}
 		>
 			<div
@@ -19,14 +19,14 @@ const TelegramLinking = () => {
 					justifyContent: 'center',
 				}}
 			>
-				<img
+				{/* <img
 					src={QRimg}
 					alt='QR redirect'
 					style={{
 						width: '300px',
 						borderRadius: '20px',
 					}}
-				/>
+				/> */}
 			</div>
 			<div className='qrComponentText'>
 				<h4>
@@ -39,4 +39,4 @@ const TelegramLinking = () => {
 	);
 };
 
-export default TelegramLinking;
+// export default TelegramLinking;

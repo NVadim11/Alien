@@ -5,7 +5,7 @@ import cross from '../../img/cross.svg';
 import crown from '../../img/crown.svg';
 import lead_icon from '../../img/leaderboard.webp';
 import ref_icon from '../../img/referral.webp';
-import face from '../../img/tigran_circle.webp';
+import avatar from '../../img/avatar.webp';
 import { useGetLeaderboardMutation } from '../../services/phpService';
 import { Switch, FormControlLabel } from '@mui/material';
 import './Header.scss';
@@ -196,7 +196,7 @@ const Header = ({ user }) => {
 		<>
 			<header id='header' className='header'>
 				<div className='header__logo'>
-					<img src={face} alt='Tiger-logo' />
+					<img src={avatar} alt='Tiger-logo' />
 				</div>
 				<div className='header__btn-group'>
 					<div className='header__social-links'>

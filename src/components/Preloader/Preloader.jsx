@@ -1,5 +1,5 @@
 import React from 'react';
-import preloaderBG from '../../img/background_mobile.webp';
+// import preloaderBG from '../../img/background_mobile.webp';
 import './Preloader.scss'; // Import the CSS file for styling
 
 const Preloader = ({ loaded }) => {
@@ -7,7 +7,7 @@ const Preloader = ({ loaded }) => {
 		<div
 		className={`preloader${loaded ? ' loaded' : ''}`}
 			style={{
-				background: `url(${preloaderBG}) no-repeat center center/cover`,
+				// background: `url(${preloaderBG}) no-repeat center center/cover`,
 			}}
 		>
 			<div className='preloaderText'>
