@@ -39,4 +39,4 @@ const TelegramLinking = () => {
 	);
 };
 
-// export default TelegramLinking;
+export default TelegramLinking;

@@ -45,4 +45,4 @@ const DynamicScreen = ({ variant }) => {
 	);
 };
 
-// export default DynamicScreen;
+export default DynamicScreen;
