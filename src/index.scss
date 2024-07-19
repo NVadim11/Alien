@@ -188,8 +188,13 @@
 
   .footerBg {
     position: absolute;
-    bottom: 0;
+    bottom: -38px;
+    text-align: center;
+    width: 100%;
     img {
       width: 100%;
+      max-width: 500px;
+      height: 206px;
+      object-fit: cover;
     }
   }
