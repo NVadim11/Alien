@@ -1,0 +1,58 @@
+{
+  "menuBtn": "Меню",
+  "menuLeaderboard": "Самые взорванные",
+  "leaderboardTitle": "Самые взорванные",
+  "menuReferral": "Кенты",
+  "referralTitle": "Подтягивай кентов и получай откат от тигра",
+  "refBonus": "Откат:",
+  "refCount": "Кенты:",
+  "refHowTo": "Че за темка?",
+  "refInvite": "Подтянуть",
+  "refInviteDescr": "кентов по реферальной ссылке",
+  "refRewards": "Получить откат",
+  "refRewardsDescr": "Получите 10% от ставок ваших друзей",
+  "refLink": "Ваша ссылка:",
+  "refLinkDescr": "Жми 'Насуетить ссылочку', чтобы получить вашу реферальную ссылку",
+  "refLinkBtn": "Насуетить ссылочку",
+  "refLinkCopy": "Скопировано!",
+	
+  "gamePauseTitle": "Осталось времени:",
+  "gamePauseMinutes": "мин",
+  "gamePauseCalc": "Расчет...",
+  "gamePauseDescr": "Тигр устал, вернется когда докурит чаху",
+
+  "mainSessionCoins": "За раз поднял",
+  "mainEnergyHint": "Чем взорваннее тигр, тем взорваннее ты. Так что не халявь, братик",
+
+  "modalSuccess": "Темка успешно выполнена.",
+  "modalAttention": "Сперва подключи кош!",
+  "modalError": "Несостыковочка вышла, давай заново",
+  "modalWalletSubmitSucc": "Кош поменяли, суети дальше",
+	"modalWalletSubmitBusy": "Этот кош уже забили",
+  "modalWalletChangeSucc": "Кош успешно заменили",
+  "modalWalletChangeBusy": "Этот кош уже забили",
+  "modalReturn": "Вернуться",
+
+  "tasksTabTitle": "Темки",
+  "tasksTitle": "Темки на ход ноги, выполняй и на чаху всегда хватит",
+  "tasksTabSocial": "Суета",
+  "tasksTabDaily": "Движ", 
+  "tasksTabPartners": "Темки",
+  "walletTaskTitle": "Текущий кошелек",
+  "walletTaskHint": "*доступно раз в 3 дня",
+
+  "taskTimer": "с",
+  "followTwitter": "Подписаться на Twitter",
+  "followTGChat": "Подписаться на ТГ Чат",
+  "followTGChannel": "Подписаться на ТГ Канал",
+  "visitWebsite": "Задонатить ламбу админам",
+  "activityCheck": "Халява не прокатит, бро, нормально делай ",
+  "activityClaim": "Клейм",
+  "activityDone": "Готово!",
+
+  "error404" : "Несостыковочка вышла",
+	"repairUpdate" : "Пару моментиков закрыть осталось, подожди",
+	"comingSoon" : "Скоро все будет, Бро",
+
+  "QRcode": "Все по красоте, бро, <br /> прям с мобилки"
+}

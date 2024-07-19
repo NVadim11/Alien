@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Not just a leader, but a king of memes & a billionaire 💰 Tap2Earn now!" />
+  <meta http-equiv="Content-Security-Policy" content="clipboard-write 'self'">
+  <meta http-equiv="Permissions-Policy" content="clipboard-write=(self)">
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Tiger</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  let tg = window.Telegram.WebApp
+  tg.expand()
+  tg.ready()
+  tg.disableVerticalSwipes()
+
+  const initData = Telegram.WebApp.initDataUnsafe
+
+  if (initData.user) {
+    fetch('/save_user_info', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(initData)
+    })
+  } else {
+    console.log('No user data available')
+  }
+
+  tg.onEvent('viewportChanged', (event) => {
+    if (!tg.isExpanded) {
+      tg.expand()
+    }
+  });
+
+</script>
+
+</html>

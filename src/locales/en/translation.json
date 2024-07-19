@@ -1,0 +1,58 @@
+{
+  "menuBtn": "Menu",
+  "menuLeaderboard": "Leaderboard",
+	"leaderboardTitle": "Leaderboard",
+	"menuReferral": "Referral",
+	"referralTitle": "Invite friends. Get rewards together.",
+	"refBonus": "Bonus:",
+	"refCount": "Referrals:",
+	"refHowTo": "How it Works",
+	"refInvite": "Invite",
+	"refInviteDescr": "Friends via the referral link",
+	"refRewards": "Get rewards",
+	"refRewardsDescr": "Receive 10% of your friends’ staking",
+	"refLink": "Your link:",
+	"refLinkDescr": "Tap 'Generate' to get your referral link",
+	"refLinkBtn": "Generate",
+	"refLinkCopy": "Copied!",
+	
+	"gamePauseTitle": "Time remaining:",
+	"gamePauseMinutes": "min",
+	"gamePauseCalc": "Calculating...",
+	"gamePauseDescr": "Tiger is tired, come back when timer is over.",
+
+	"mainSessionCoins": "For Session",
+	"mainEnergyHint": "The happier the Tiger — the more you get  Make it rain and enjoy rewards",
+
+	"modalSuccess": "Task completed successfully.",
+	"modalAttention": "Submit your wallet first.",
+	"modalError": "An error occurred. Please try again later.",
+	"modalWalletSubmitSucc": "Wallet submitted successfully.",
+	"modalWalletSubmitBusy": "This wallet is already in use.",
+	"modalWalletChangeSucc": "Wallet changed successfully.",
+	"modalWalletChangeBusy": "This wallet is already in use.",
+	"modalReturn": "Return",
+
+	"tasksTabTitle": "Tasks",
+	"tasksTitle": "Complete tasks and get rewarded!",
+	"tasksTabSocial": "Social",
+	"tasksTabDaily": "Daily",
+	"tasksTabPartners": "Partners",
+	"walletTaskTitle": "Current wallet",
+	"walletTaskHint": "*it can be done once every 3 days",
+
+	"taskTimer": "s",
+	"followTwitter": "Follow Twitter",
+	"followTGChat": "Follow TG Chat",
+	"followTGChannel": "Follow TG Channel",
+	"visitWebsite": "Visit Website",
+	"activityCheck": "Activity not confirmed. Are you certain you complete this task?",
+	"activityClaim": "Claim",
+	"activityDone": "Done!",
+			
+	"error404" : "Something went wrong",
+	"repairUpdate" : "Repairs and upgrades are underway",
+	"comingSoon" : "Coming Soon",
+
+	"QRcode": "Leave the desktop. <br /> Mobile gaming rocks!"
+}

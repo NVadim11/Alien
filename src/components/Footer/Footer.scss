@@ -1,0 +1,496 @@
+// variables
+
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+.popupTasks-show body::after {
+  // opacity: 1;
+}
+.popupTasks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: visibility 0.8s ease 0s;
+  pointer-events: none;
+}
+.popupTasks_show {
+  z-index: 20;
+  display: block;
+  overflow: auto;
+  pointer-events: auto;
+}
+.popupTasks_show .popupTasks__content {
+  display: flex;
+  flex-direction: column;
+}
+.popupTasks__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+}
+.popupTasks__content {
+  display: none;
+  transition: transform 0.3s ease 0s;
+  width: 100%;
+}
+
+.footerMain {
+    z-index: 14;
+    position: relative;
+    margin: 10px 0 10px 0;
+    @media (max-width: 359px) { 
+      scale: 0.9;
+    }
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__activities {
+    display: flex;
+    // border: 1px solid var(--mainColor);
+    border-radius: 18px;
+    padding: 15px 10px;
+    gap: 15px;
+    // background: #80c27d;
+  }
+  &__activitiesBtn {
+    position: relative;
+    button {
+        border: 1px solid #000000;
+        border-radius: 17px;  
+        height: 66px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        background: transparent;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.03em;
+        text-align: center;
+        width: 174px;
+    }
+    button:disabled {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0.02em;
+      display: flex;
+      justify-content: center;
+      span {
+        position: absolute;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: var(--mainColor);
+      }
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__activitiesBtn:first-child {
+    button {
+        background: #2cb726;
+         color: var(--mainColor);
+         font-size: 22px;
+    }
+    span {
+      z-index: 10;
+      position: relative;
+      color: #ffffff;
+    }
+    img {
+      position: relative;
+      z-index: 10;
+      margin-right: 10px;
+    }
+  }
+  &__activitiesHint {
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #0b1f46 0%, #000 100%);
+    transform: rotate(8deg);
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    padding: 0 0.5625rem;
+    top: -0.9375rem;
+    right: -1.5625rem;
+    z-index: 100;
+  }
+}
+
+.popupTasks {
+    display: flex;
+    zoom: 0.9;
+  &__wrapper {
+    padding: 0 12px;
+    justify-content: center;
+  }
+  &__content {
+    position: relative;
+    border: 1px solid #0d9047;
+    border-radius: 20px;
+    padding: 22px 12px;
+    background: #84c881;
+  }
+  &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+  &__title {
+      position: relative;
+      h4 {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 100%;
+        width: 75%;
+        color: var(--mainColor);
+      }
+  }
+  &__coins {
+      position: relative;
+      display: flex;
+  }
+  &__coinBox {
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    gap: 12px;
+  }
+  &__coinImg {
+    width: 44px;
+    background: transparent;
+    img {
+      width: 100%;
+    }
+  }
+  &__coinAmount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: var(--mainColor);
+    }
+  }
+  &__tabBtns {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #292f4fc5;
+    border-radius: 10px;
+    width: 290px;
+    height: 50px;
+    button {
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  &__tasks {
+    display: none;
+    margin-top: 12px;
+    &.active {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  &__task {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    .claim-button {
+    background: #2cb726;
+    align-items: center;
+    border: 1px solid #0d9047;
+    color: #fff;
+    border-radius: 31px;
+    display: flex;
+    justify-content: center;
+    padding: 6px 12px;
+    width: 30%;
+    position: absolute;
+    right: 12px;
+    }
+    button {
+        border: 1px solid #0d9047;
+        border-radius: 10px;
+        padding: 12px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: rgba(8, 18, 41, 0.2);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.02em;
+    }
+    button:disabled {
+      background: #2cb726;
+      color: #ffffff;
+      p {
+        border: none;
+        background: transparent;
+      }
+    }
+    span {
+      text-align: start;
+      width: 65%;
+      margin-right: 10px;
+    }
+    svg {
+        position: absolute;
+        right: 12px;
+    }
+    p {
+      display: flex;
+      align-items: center;
+      background: #2cb726;
+      border: 1px solid #0d9047;
+      color: #fff;
+      border-radius: 31px;
+      padding: 6px 12px;
+      width: 30%;
+      justify-content: center;
+      position: absolute;
+      right: 12px;
+    }
+    .rewardCoin {
+      margin-left: 5px;
+      margin-top: 0px;
+      right: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      width: 24px;
+      background: transparent;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__task-img {
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;position: relative;
+    img {
+      width: 100%;
+    }
+    svg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__task:last-child {
+    margin-bottom: 0;
+  }
+
+&__tabs-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-self: center;
+    position: relative;
+    border: 1px solid #0d9047;
+    background: rgba(8, 18, 41, 0.2);
+    border-radius: 18px;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  &__tabs-btn {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    button {
+      height: 38px;
+      width: 100%;
+      min-width: 75px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0.02em;
+      color: var(--mainColor);
+      border: 1px solid #0d9047;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    &.active {
+      overflow: hidden;
+      button {
+        opacity: 1;
+        color: #fff;
+        background: #2cb726;
+        border: 1px solid #0d9047;
+      }
+    }
+    .footerMain__activitiesHint {
+      display: none;
+      @media (max-width: 768px) {
+        display: flex;
+        font-size: 0.625rem;
+        padding: 0 3px;
+      }
+    }
+  }
+  &__walletTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    button {
+      border: 1px solid #0d9047;
+      border-radius: 10px;
+    }
+    p {
+      color: #ffffff;
+      align-items: center;
+      background: transparent;
+      border-radius: 31px;
+      display: flex;
+      padding: 6px 12px;
+      line-height: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      width: 30%;
+      justify-content: center;
+      margin: 0 12px 0 0;
+      img {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__progressBar {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    padding: 0 9px 0 12px;
+    margin-top: 10px;
+    progress {
+      width: 100%;
+      height: 100%;
+    }
+    progress::-webkit-progress-bar {
+   background-color: #0D9047;
+   border-radius: 30px;
+   // box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+  }
+  progress::-webkit-progress-value {
+    background: #2cb726;
+   border-radius: 30px;
+   // box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+  }
+  }
+}
+
+.popupTasks__task {
+  img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  .popupTasks__task-rew {
+    border: none;
+    background: transparent;
+    justify-content: flex-end;
+    img {
+      margin-right: 0;
+      width: 20px;
+      height: 20px;
+    }
+}
+}
+
+// .popupError {
+//   z-index: 400;
+//   position: absolute;
+//   transition: visibility 0.8s ease 0s;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   &__wrapper {
+//     height: 100%;
+//     min-height: 100%;
+//     width: 100%;
+//     padding: 0 30px;
+//     display:flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+//   &__content {
+//     flex-direction: column;
+//     border: 2px solid var(--mainColor);
+//     border-radius: 24px;
+//     padding: 20px 40px 40px 20px;
+//     position: relative;
+//     transition: transform .3s ease 0s;
+//     width: 100%;
+//     background: #80c27d;
+//   }
+//   &__close {
+//     position: absolute;
+//     top: 12px;
+//     right: 12px;
+// }
+//   &__title {
+//     font-size: 1.25rem;
+//     position: relative;
+//     font-weight: 900;
+//     line-height: 100%;
+//     margin-top: 30px;
+//     word-break: break-word;
+//   }
+// }
+
+[data-tc-dropdown-container="true"] {
+  left: 22px!important;
+}
+
+
