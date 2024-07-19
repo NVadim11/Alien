@@ -36,7 +36,7 @@
 		padding: 8px 16px;
 		width: 106px;
 		height: 44px;
-		background: var(--altBG);
+		background: transparent;
 		font-weight: 400;
 		font-size: 20px;
 		display: flex;
@@ -49,14 +49,13 @@
 	}
 	&__menu {
 		display: flex;
-		border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+		border: 0.0625rem solid #65D431;
 		// position: absolute;
 		top: 0;
 		flex-direction: column;
 		position: absolute;
 		background: var(--altBG);
-		z-index: 100;
-		border: 1px solid #000000;
+		z-index: 10;
 		border-radius: 20px;
 		padding: 12px;
 		gap: 8px;
@@ -196,7 +195,7 @@
 			font-size: 24px;
 			line-height: 100%;
 			letter-spacing: 0.01em;
-			color: var(--altColor);
+			color: var(--mainColor);
 		}
 	}
 	&__refInfo-item {
@@ -205,7 +204,7 @@
 			font-size: 24px;
 			line-height: 100%;
 			letter-spacing: 0.01em;
-			color: var(--altColor);
+			color: var(--mainColor);
 		}
 	}
 	&__grid {
@@ -240,7 +239,7 @@
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 100%;
-			color: #0d9047;
+			color: var(--mainColor);
 		}
 	}
 	.inviteLinkBtn {
