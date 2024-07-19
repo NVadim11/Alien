@@ -536,12 +536,12 @@ const MainContent = ({ user }) => {
 														exit={{ opacity: 0 }}
 														transition={{ duration: 1.5 }}
 														style={{
-															color: '#000',
+															color: '#fff',
 															fontSize: '34px',
 															left: `${anim.x}px`,
 															top: `${anim.y}px`,
 															position: 'absolute',
-															color: boostPhase ? '#FFDA17' : '#333333',
+															color: boostPhase ? '#FFDA17' : '#fff',
 															zIndex: 10,
 															fontFamily: 'Bebas',
 															textShadow: '0px 4px 6px rgba(0, 0, 0, 0.6)',

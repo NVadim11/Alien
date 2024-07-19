@@ -117,6 +117,14 @@
     background: #559767
   }
 }
+&__clickArea {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
   &__imageContainer {
     display: flex;
     position: relative;
@@ -124,21 +132,16 @@
     align-items: center;  
     justify-content: center;
     img {        
-      height: 245px;
+      position: absolute;
+      width: 375px;
+      height: 628px;
+      top: -210px;
     } 
-  }
-  &__clickArea {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 15;
-    background: transparent;
   }
   &__footer {
     display: flex;
     flex-direction: column;
+    z-index: 10   ;
   }
   &__sessionCoins {
     position: relative;
