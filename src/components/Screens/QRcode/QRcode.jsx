@@ -7,9 +7,11 @@ const TelegramLinking = () => {
 	return (
 		<div
 			className='qrComponent'
-			style={{
-				// background: `url(${preloaderBG}) no-repeat center center/cover`,
-			}}
+			style={
+				{
+					// background: `url(${preloaderBG}) no-repeat center center/cover`,
+				}
+			}
 		>
 			<div
 				style={{

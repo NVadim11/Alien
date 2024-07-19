@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import energy from '../../img/energy.webp';
-import boostIcon from '../img/alienBoost.webp';
+import boostIcon from '../../img/alienBoost.webp';
 import animationBlink from '../../img/animationBlink.gif';
 import animationBoost from '../../img/animationBoost.gif';
 import animationCamera from '../../img/animationCamera.gif';

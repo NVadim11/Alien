@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 import { useGetUserByTgIdQuery } from '../services/phpService';
 
 import boostIcon from '../img/alienBoost.webp';
-import alienFullSize from '../img/alienFullSizewebp';
+import alienFullSize from '../img/alienFullSize.webp';
 import alien from '../img/alien.webp';
 import animationBlink from '../img/animationBlink.gif';
 import animationBoost from '../img/animationBoost.gif';
 import animationCamera from '../img/animationCamera.gif';
-import animationCow from '../img/animationCow/gif';
+import animationCow from '../img/animationCow.gif';
 import animationLazer from '../img/animationLazer.gif';
 import animationPointing from '../img/animationLazer.gif';
 import animationTongue from '../img/animationTongue.gif';
@@ -25,7 +25,7 @@ import ufo from '../img/ufo.webp';
 import podium from '../img/podium.webp';
 import referral from '../img/referral.webp';
 import repairsBG from '../img/repairsBG.webp';
-import treesBG from '../img/treesBG.wepb';
+import treesBG from '../img/treesBG.webp';
 
 import Footer from './Footer/Footer';
 import Header from './Header/Header';

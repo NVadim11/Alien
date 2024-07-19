@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import tigranChill from '../../../img/tigranChill-optimize.gif';
-import tigranCircle from '../../../img/tigran_circle.webp';
+import animationTongue from '../../../img/animationTongue.gif';
+import avatar from '../../../img/avatar.webp';
 
 const GamePaused = ({ user, remainingTime }) => {
 	const [timeRemaining, setTimeRemaining] = useState(remainingTime);
@@ -21,7 +21,7 @@ const GamePaused = ({ user, remainingTime }) => {
 			<div className='mainContent__totalCoins'>
 				<div className='mainContent__totalCoinsBox'>
 					<div className='mainContent__totalCoinsImg' draggable='false'>
-						<img src={tigranCircle} draggable='false' />
+						<img src={avatar} draggable='false' />
 					</div>
 					{user !== null && (
 						<div className='mainContent__totalCoinsAmount'>
@@ -38,7 +38,7 @@ const GamePaused = ({ user, remainingTime }) => {
 				<h4 style={{ marginBottom: '10px', marginTop: '20px' }}>{t('gamePauseCalc')}</h4>
 			)}
 			<div className='mainContent__imageContainer'>
-				<img src={tigranChill} draggable='false' alt='Tiger Chill' />
+				<img src={animationTongue} draggable='false' alt='Tiger Chill' />
 			</div>
 			<p style={{ marginTop: '20px' }}>{t('gamePauseDescr')}</p>
 		</div>
