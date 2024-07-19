@@ -3,25 +3,29 @@ import moment from 'moment-timezone';
 import { useEffect, useRef, useState } from 'react';
 import { useGetUserByTgIdQuery } from '../services/phpService';
 
+import alienBoost from '../img/alienBoost.webp';
+import alienFullSize from '../img/alienFullSizewebp';
+import alien from '../img/alien.webp';
+import animationBlink from '../img/animationBlink.gif';
+import animationBoost from '../img/animationBoost.gif';
+import animationCamera from '../img/animationCamera.gif';
+import animationCow from '../img/animationCow/gif';
+import animationLazer from '../img/animationLazer.gif';
+import animationPointing from '../img/animationLazer.gif';
+import animationTongue from '../img/animationTongue.gif';
 import avatar from '../img/avatar.webp';
-import back1 from '../img/back1.webp';
-import back2 from '../img/back2.webp';
-import back3 from '../img/back3.webp';
-import bgMob from '../img/background_mobile.webp';
+import copy from '../img/copy.svg';
+import cross from '../img/cross.svg';
+import crown from '../img/crown.svg';
+import darkBG from '../img/darkBG.webp';
 import energy from '../img/energy.webp';
 import leaderboard from '../img/leaderboard.webp';
+import lightBG from '../img/lightBG.webp';
+import ufo from '../img/ufo.webp';
+import podium from '../img/podium.webp';
 import referral from '../img/referral.webp';
-import tiger1 from '../img/tiger1.webp';
-import tiger_ava from '../img/tiger_ava.webp';
-import boostCoin from '../img/tigranBoost.webp';
-import tigranCash from '../img/tigranCash-optimize.gif';
-import tigranChill from '../img/tigranChill-optimize.gif';
-import tigranGold from '../img/tigranGold-optimize.gif';
-import tigranIdle from '../img/tigranIdle-optimize.gif';
-import tigranMachine from '../img/tigranMachine-optimize.gif';
-import tigranQR from '../img/tigranQR.webp';
-import tigranTalk from '../img/tigranTalk-optimize.gif';
-import tigranCircle from '../img/tigran_circle.webp';
+import repairsBG from '../img/repairsBG.webp';
+import treesBG from '../img/treesBG.wepb';
 
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
@@ -105,25 +109,29 @@ const MainComponent = () => {
 		};
 
 		const imageSources = [
+			alienBoost,
+			alienFullSize,
+			alien,
+			animationBlink,
+			animationBoost,
+			animationCamera,
+			animationCow,
+			animationLazer,
+			animationPointing,
+			animationTongue,
 			avatar,
-			back1,
-			back2,
-			back3,
-			bgMob,
+			copy,
+			cross,
+			crown,
+			darkBG,
 			energy,
 			leaderboard,
+			lightBG,
+			ufo,
+			podium,
 			referral,
-			tiger_ava,
-			tiger1,
-			tigranCircle,
-			tigranCash,
-			tigranChill,
-			tigranGold,
-			tigranQR,
-			boostCoin,
-			tigranIdle,
-			tigranMachine,
-			tigranTalk,
+			repairsBG,
+			treesBG,
 		];
 
 		const loadImages = async () => {
