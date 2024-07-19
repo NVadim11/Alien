@@ -199,6 +199,9 @@ const MainComponent = () => {
 										<MainContent user={user} />
 									</main>
 									<Footer user={user} />
+									<div className="footerBg">
+										<img src={treesBG} />
+									</div>
 								</>
 							) : (
 								<DynamicScreen variant={variant} />
