@@ -6,13 +6,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import energy from '../../img/energy.webp';
-import boostCoin from '../../img/tigranBoost.webp';
-import tigranCash from '../../img/tigranCash-optimize.gif';
-import tigranChill from '../../img/tigranChill-optimize.gif';
-import tigranGold from '../../img/tigranGold-optimize.gif';
-import tigranIdle from '../../img/tigranIdle-optimize.gif';
-import tigranMachine from '../../img/tigranMachine-optimize.gif';
-import tigranTalk from '../../img/tigranTalk-optimize.gif';
+import boostIcon from '../img/alienBoost.webp';
+import animationBlink from '../../img/animationBlink.gif';
+import animationBoost from '../../img/animationBoost.gif';
+import animationCamera from '../../img/animationCamera.gif';
+import animationCow from '../../img/animationCow.gif';
+import animationLazer from '../../img/animationLazer.gif';
+import animationPointing from '../../img/animationPointing.gif';
+import animationTongue from '../../img/animationTongue.gif';
 import { useUpdateBalanceMutation } from '../../services/phpService';
 import GamePaused from './GamePaused/GamePaused';
 import './MainContent.scss';
@@ -20,9 +21,8 @@ import './MainContent.scss';
 const MainContent = ({ user }) => {
 	const [currCoins, setCurrCoins] = useState(0);
 	const [currEnergy, setCurrEnergy] = useState(0); //user?.energy
-	const [heroState, setHeroState] = useState(tigranIdle);
+	const [heroState, setHeroState] = useState(animationBlink);
 	const [heroAnimation, setHeroAnimation] = useState(heroState);
-	const coinRef = useRef(null);
 	const [updateBalance] = useUpdateBalanceMutation();
 	const [position, setPosition] = useState({ x: '0', y: '0' });
 	const [boostPhase, setBoostPhase] = useState(false);
@@ -42,7 +42,6 @@ const MainContent = ({ user }) => {
 	const [resetCoinsCalled, setResetCoinsCalled] = useState(false);
 	const maxEnergy = 1000;
 	const timeoutRef = useRef(null);
-	const tigerImgRef = useRef(null);
 	const isMedia = useMediaQuery({ maxWidth: '1439.98px' });
 
 	const tg = window.Telegram.WebApp;
@@ -270,17 +269,17 @@ const MainContent = ({ user }) => {
 
 	const updateCurrCoins = () => {
 		if (currEnergy >= 0 && currEnergy <= 150) {
-			setHeroState(tigranIdle);
+			setHeroState(animationBlink);
 		} else if (currEnergy >= 151 && currEnergy <= 300) {
-			setHeroState(tigranTalk);
+			setHeroState(animationCow);
 		} else if (currEnergy >= 301 && currEnergy <= 550 && !resetCoinsCalled) {
 			setResetCoinsCalled(true); // Set the state to true
 			resetCoins(); // Call resetCoins only once
-			setHeroState(tigranCash);
+			setHeroState(animationPointing);
 		} else if (currEnergy >= 551 && currEnergy <= 800) {
-			setHeroState(tigranChill);
+			setHeroState(animationCamera);
 		} else if (currEnergy >= 801 && currEnergy <= 1000) {
-			setHeroState(tigranMachine);
+			setHeroState(animationLazer);
 		}
 		setHeroAnimation(heroState);
 		setIsCoinsChanged(true);
@@ -465,7 +464,7 @@ const MainContent = ({ user }) => {
 													onClick={boostClickedHandler}
 												>
 													<motion.img
-														src={boostCoin}
+														src={boostIcon}
 														alt='Boost coin'
 														style={{
 															width: '100%',
@@ -490,7 +489,7 @@ const MainContent = ({ user }) => {
 										<div className='mainContent__totalCoins'>
 											<div className='mainContent__totalCoinsBox'>
 												<div className='mainContent__totalCoinsImg' draggable='false'>
-													<img src={boostCoin} draggable='false' />
+													<img src={boostIcon} draggable='false' />
 												</div>
 												{user && totalPoints !== null && (
 													<div className='mainContent__totalCoinsAmount'>
@@ -558,7 +557,7 @@ const MainContent = ({ user }) => {
 										))}
 										<div className='mainContent__imageContainer'>
 											<img
-												src={boostPhase ? tigranGold : heroAnimation}
+												src={boostPhase ? animationBoost : heroAnimation}
 												draggable='false'
 												alt='Tiger idle'
 											/>
@@ -568,7 +567,7 @@ const MainContent = ({ user }) => {
 										{!gamePaused && (
 											<div className='mainContent__sessionCoins'>
 												<div className='mainContent__sessionCoins-img' draggable='false'>
-													<img src={boostCoin} draggable='false' />
+													<img src={boostIcon} draggable='false' />
 												</div>
 												<div className='mainContent__sessionCoins-text'>
 													<span>{t('mainSessionCoins')}</span>

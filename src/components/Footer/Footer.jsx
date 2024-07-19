@@ -14,10 +14,8 @@ import cross from '../../img/cross.svg';
 import boostCoin from '../../img/alienBoost.webp';
 import Modal from '../Modal/Modal';
 import './Footer.scss';
-import { init } from 'aos';
 
 const Footer = ({ user }) => {
-	const tg = window.Telegram.WebApp;
 	const [tasksOpen, setTasksOpen] = useState(false);
 	const [passTask] = usePassTaskMutation();
 	const [setWallet] = useSetWalletMutation();

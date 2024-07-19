@@ -25,20 +25,6 @@
   tg.ready()
   tg.disableVerticalSwipes()
 
-  const initData = Telegram.WebApp.initDataUnsafe
-
-  if (initData.user) {
-    fetch('/save_user_info', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(initData)
-    })
-  } else {
-    console.log('No user data available')
-  }
-
   tg.onEvent('viewportChanged', (event) => {
     if (!tg.isExpanded) {
       tg.expand()

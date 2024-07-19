@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 import { useEffect, useRef, useState } from 'react';
 import { useGetUserByTgIdQuery } from '../services/phpService';
 
-import alienBoost from '../img/alienBoost.webp';
+import boostIcon from '../img/alienBoost.webp';
 import alienFullSize from '../img/alienFullSizewebp';
 import alien from '../img/alien.webp';
 import animationBlink from '../img/animationBlink.gif';
@@ -109,7 +109,7 @@ const MainComponent = () => {
 		};
 
 		const imageSources = [
-			alienBoost,
+			boostIcon,
 			alienFullSize,
 			alien,
 			animationBlink,
